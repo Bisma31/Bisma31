@@ -18,8 +18,7 @@ Book.getAll = result => {
 };
 // Mengambil buku yang memiliki id = BookId
 Book.findById = (id, result) => {
- sql.query(`SELECT * FROM Books WHERE id = ${id}`, (err, res)
-=> {
+ sql.query(`SELECT * FROM Books WHERE id = ${id}`, (err, res)=> {
  if (err) {
  console.log("error: ", err);
  result(err, null);
